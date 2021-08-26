@@ -1,0 +1,103 @@
+ body {
+margin: 0;
+padding: 0;
+}
+
+
+.header-style{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  background-color: blue;
+  width: 100%;
+  top : 0;
+  /*1. Минимальные размеры можно поставить; 2. Можно задать внутренние отступы*/
+}
+
+@media (max-width : 600px){
+  .header-style{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    background-color: blue;
+    width: 100%;
+    top: 0;
+  }
+}
+
+.header-style a{
+  text-decoration: none;
+  color: white;
+}
+
+.flex-push{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.burger-menu{
+  display: inline-block;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.burger-menu-dash{
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+
+}
+
+.drop-down{
+  position: relative;
+  width: 100%;
+}
+.drop-down-menu{ /*Вопрос Андрею: как так получается, что у элементов с разными типами позиционирования не сравниваются положительые z-index*/
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(136, 136, 230);
+  /*z-index: 10;*/
+  
+}
+
+.drop-down-menu ul{
+  list-style : none;
+  color: white;
+}
+
+
+.drop-down-menu li{
+  cursor: pointer;
+  margin: 5%;
+}
+
+.arrow-navigator{
+  position: fixed;
+  background-color: none;
+  right: 3%;
+  bottom: 0%;
+  /*z-index: -1;*/
+}
+
+
+.arrow-navigator{
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+}
+
+.arrow-navigator-up {
+  transform: rotate(0deg);
+  opacity: 0.6;
+}
+
+.arrow-navigator-down {
+  transform: rotate(180deg);
+  opacity: 0.6;
+}
